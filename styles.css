@@ -645,7 +645,8 @@ h1 {
 
 @media (max-width: 980px) {
   body {
-    overflow: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
   }
 
   .hero {
@@ -724,7 +725,13 @@ h1 {
   }
 
   .choice-page {
-    padding: 82px 20px 32px;
+    min-height: auto;
+    padding: 82px 20px 96px;
+  }
+
+  .download-page {
+    padding-bottom: 128px;
+    padding-bottom: max(128px, env(safe-area-inset-bottom));
   }
 
   .choice-shell {
@@ -740,8 +747,19 @@ h1 {
   }
 
   .download-cover {
-    min-height: 360px;
+    min-height: auto;
     padding: 18px;
+  }
+
+  .download-cover img {
+    width: min(260px, 72vw);
+    max-height: none;
+  }
+}
+
+@media (max-width: 760px) {
+  .download-list {
+    gap: 28px;
   }
 }
 
@@ -786,7 +804,22 @@ h1 {
     padding: 22px;
   }
 
+  .download-page {
+    padding-bottom: 156px;
+    padding-bottom: max(156px, env(safe-area-inset-bottom));
+  }
+
+  .download-content {
+    padding: 22px;
+  }
+
   .choice-actions a {
     flex: 1 1 130px;
+  }
+
+  .file-option {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
   }
 }
