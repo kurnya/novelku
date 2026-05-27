@@ -649,11 +649,17 @@ h1 {
     overflow-y: auto;
   }
 
+  body.home-body {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
   .hero {
     grid-template-columns: 1fr;
     gap: 22px;
     width: min(100% - 32px, 720px);
-    padding: 34px 0 92px;
+    min-height: auto;
+    padding: 34px 0 126px;
     text-align: center;
   }
 
