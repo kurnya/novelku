@@ -308,6 +308,14 @@ h1 {
     0 0 22px rgba(215, 186, 114, 0.1);
 }
 
+.pathway-symbol img {
+  display: block;
+  width: 46px;
+  height: 46px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 12px rgba(215, 186, 114, 0.24));
+}
+
 .pathway-symbol i::before,
 .pathway-symbol i::after {
   position: absolute;
@@ -719,6 +727,11 @@ h1 {
   .pathway-symbol i {
     width: 30px;
     height: 30px;
+  }
+
+  .pathway-symbol img {
+    width: 36px;
+    height: 36px;
   }
 
   .pathway-symbol i::before,
