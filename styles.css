@@ -34,18 +34,12 @@ body.home-body {
 
 body::before {
   position: fixed;
-  inset: -24px;
+  inset: 0;
   z-index: -2;
   content: "";
   background:
-    linear-gradient(rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0.66)),
-    radial-gradient(circle at 64% 43%, rgba(204, 168, 84, 0.38), transparent 9rem),
-    radial-gradient(circle at 38% 38%, rgba(70, 95, 80, 0.4), transparent 18rem),
-    radial-gradient(circle at 75% 22%, rgba(78, 87, 89, 0.5), transparent 21rem),
-    radial-gradient(circle at 24% 18%, rgba(94, 32, 38, 0.32), transparent 14rem),
-    linear-gradient(135deg, #020303 0%, #12201a 38%, #263230 62%, #050604 100%);
-  filter: blur(10px) saturate(0.85);
-  transform: scale(1.04);
+    linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.68)),
+    url("assets/backgound/bg11.webp") center / cover no-repeat;
 }
 
 body::after {
@@ -288,7 +282,9 @@ h1 {
 .pathway-symbol {
   display: grid;
   gap: 7px;
-  place-items: center;
+  grid-template-rows: 46px minmax(16px, auto);
+  align-content: center;
+  justify-items: center;
   min-height: 76px;
   color: rgba(245, 227, 194, 0.82);
 }
@@ -689,7 +685,7 @@ h1 {
     top: auto;
     bottom: 14px;
     width: min(92vw, 620px);
-    height: 72px;
+    height: 88px;
     transform: translateX(50%);
   }
 
@@ -714,14 +710,17 @@ h1 {
   .pathway-track {
     display: flex;
     width: max-content;
-    padding: 8px 10px;
+    align-items: center;
+    padding: 8px 12px;
     animation: pathwayScrollMobile 46s linear infinite;
   }
 
   .pathway-symbol {
-    min-width: 76px;
-    min-height: 54px;
-    gap: 4px;
+    grid-template-rows: 36px minmax(20px, auto);
+    min-width: 86px;
+    min-height: 72px;
+    gap: 6px;
+    align-content: center;
   }
 
   .pathway-symbol i {
@@ -740,7 +739,9 @@ h1 {
   }
 
   .pathway-symbol b {
+    max-width: 82px;
     font-size: 0.5rem;
+    line-height: 1.2;
   }
 
   .choice-page {
@@ -816,7 +817,7 @@ h1 {
   }
 
   .pathway-rail {
-    height: 66px;
+    height: 88px;
   }
 
   .choice-card {
